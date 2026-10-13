@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>¿Cómo funciona? y Comandos • Nico Yak Study Stream</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+
+	<!-- Configs -->
+	<script src="./configs.js"></script>
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./styles/tienda.css" />
+</head>
+<body>
+	<div class="page-container">
+		<!-- Top Navigation Hyperlinks -->
+		<nav class="top-nav-tabs" aria-label="Navegación principal">
+			<a href="./tienda.html" class="nav-tab-link">🛒 Catálogo de Recompensas</a>
+			<a href="./comandos.html" class="nav-tab-link active">📖 ¿Cómo funciona? y Tabla de Comandos</a>
+		</nav>
+
+		<!-- Hero Header -->
+		<header class="catalog-header">
+			<div class="tape-strip"></div>
+			<div class="brand-pill">
+				<span class="live-indicator"></span>
+				<span>GUÍA PARA NUEVOS COMPAÑEROS DE ESTUDIO</span>
+			</div>
+			<h1 class="catalog-title">¿Cómo funciona el Sistema de Tareas?</h1>
+			<p class="catalog-subtitle">
+				En el stream de <strong>Nico Yak</strong> estudiamos y trabajamos juntos. Podés armar tu propia lista de tareas en pantalla desde el chat de Twitch, medir el tiempo que le dedicás a cada una y ganar <strong>✅Checks</strong> para canjear recompensas.
+			</p>
+			<div class="rules-row">
+				<div class="rule-badge">
+					<span>📖 <strong>Múltiples tareas</strong> por persona</span>
+				</div>
+				<div class="rule-badge">
+					<span>⏱ <strong>1 minuto = 1 ✅Check</strong> al completar</span>
+				</div>
+				<div class="rule-badge">
+					<span>⭐ <strong>Bonus Suscriptores: x1.25 (+25%)</strong> en cada tarea</span>
+				</div>
+			</div>
+		</header>
+
+		<!-- Step-by-Step Post-it Cards -->
+		<section>
+			<h2 class="section-heading">📌 Paso a paso: Cómo empezar</h2>
+			<div class="steps-grid">
+				<article class="step-card">
+					<div class="mini-washi"></div>
+					<span class="step-num-badge">PASO 1</span>
+					<h3>Anotá tus tareas en la hoja</h3>
+					<p>
+						Escribí <code>!add</code> seguido de tu tarea (ej: <code>!add Leer unidad 2</code>). Si querés anotar varias de una sola vez, separalas con comas:<br />
+						<code>!add Leer cap 1, Resumen, Ejercicios</code>
+					</p>
+				</article>
+
+				<article class="step-card">
+					<div class="mini-washi"></div>
+					<span class="step-num-badge">PASO 2</span>
+					<h3>El reloj corre en tu tarea #1</h3>
+					<p>
+						Tu primera tarea pendiente queda como <strong>Activa (#1)</strong> y muestra un reloj en vivo <code>[⏱ Xm]</code>. Cuando la terminás con <code>!listo</code> o <code>!done</code>, ganás <strong>1 ✅Check por minuto</strong> (<strong>x1.25</strong> si sos Sub ⭐) y el reloj arranca automáticamente en tu siguiente tarea.
+					</p>
+				</article>
+
+				<article class="step-card">
+					<div class="mini-washi"></div>
+					<span class="step-num-badge">PASO 3</span>
+					<h3>Cambiá de foco o pausá con !afk</h3>
+					<p>
+						Con <code>!focus &lt;número&gt;</code> cambiás de tarea activa transfiriendo tu tiempo. Y si te tenés que levantar un rato, usá <code>!afk</code> o <code>!break</code> para pausar tu reloj <code>[⏸AFK ]</code> y retomarlo cuando vuelvas sin perder tus minutos.
+					</p>
+				</article>
+
+				<article class="step-card">
+					<div class="mini-washi"></div>
+					<span class="step-num-badge">PASO 4</span>
+					<h3>Canjeá premios con tus ✅Checks</h3>
+					<p>
+						Tus <strong>✅Checks</strong> se guardan entre streams. Consultalos con <code>!puntos</code> y usalos en el chat con <code>!canjear &lt;código&gt;</code> para sumar pomodoros, elegir música, pedir VIP/Sub, donar a amigos con <code>!donar</code> o iniciar el <strong>Motín de Robin Hood</strong>.
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<!-- Visual Example of the Stream Notebook -->
+		<section class="preview-box">
+			<div>
+				<h2 class="section-heading" style="margin-bottom: 8px;">📝 Así se ve tu lista en el Stream</h2>
+				<p style="font-size: 17.5px; color: #334155; margin-bottom: 10px;">
+					Debajo de tu nombre en el overlay de la hoja de cuaderno vas a ver todas tus tareas ordenadas automáticamente:
+				</p>
+				<ul style="padding-left: 20px; font-size: 17px; color: #475569; display: flex; flex-direction: column; gap: 6px;">
+					<li><strong>Tareas completadas (✔):</strong> Aparecen tachadas y en gris cuando tirás <code>!listo</code> o <code>!next</code>.</li>
+					<li><strong>Tarea #1 (Activa):</strong> Tiene el cronómetro <code>[⏱ 25m]</code> (o <code>[⏸AFK ]</code> cuando estás en pausa con <code>!afk</code>).</li>
+					<li><strong>Tareas en cola (#2, #3...):</strong> Esperan su turno y pasan a ser la #1 apenas completás la actual.</li>
+				</ul>
+			</div>
+			<div class="notebook-demo" aria-label="Ejemplo visual de la lista de tareas">
+				<div class="demo-user">tu_usuario:</div>
+				<div class="demo-task-done"><span>☑</span> <span>Leer apuntes de clase</span></div>
+				<div class="demo-task-active">
+					<span>☐</span>
+					<span>1. Hacer resumen del tema 3</span>
+					<span class="demo-timer">[⏱ 25m]</span>
+				</div>
+				<div class="demo-task-queued"><span>☐</span> <span>2. Practicar ejercicios de parcial</span></div>
+			</div>
+		</section>
+
+		<!-- Full Commands Table Section -->
+		<section class="controls-section">
+			<h2 class="section-heading" style="margin-bottom: 0;">⌨️ Tabla Completa de Comandos del Chat</h2>
+
+			<div class="search-box">
+				<svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="11" cy="11" r="8"></circle>
+					<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+				</svg>
+				<input type="text" id="cmd-search-input" placeholder="Buscar comando, alias o función (ej: !focus, !afk, puntos, donar)..." aria-label="Buscar comandos" />
+			</div>
+
+			<div class="category-filters" id="cmd-category-filters">
+				<button class="filter-btn active" data-category="all">Todos</button>
+				<button class="filter-btn" data-category="Tareas">📖 Tareas</button>
+				<button class="filter-btn" data-category="Checks">✅ Checks y Tienda</button>
+				<button class="filter-btn" data-category="Eventos">🏹 Donaciones y Robin Hood</button>
+			</div>
+
+			<div class="commands-table-wrapper">
+				<table class="commands-table">
+					<thead>
+						<tr>
+							<th>Comando</th>
+							<th>Alias disponibles</th>
+							<th>Ejemplo en el chat</th>
+							<th>¿Cómo funciona?</th>
+						</tr>
+					</thead>
+					<tbody id="commands-tbody">
+						<!-- Populated dynamically by scripts/comandos.js -->
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- Bottom Banner back to Rewards Store -->
+		<aside class="guide-banner-cta">
+			<div class="guide-banner-text">
+				<span class="guide-banner-title">🛒 ¿Ya sabés qué premios vas a reclamar con tus ✅Checks?</span>
+				<span class="guide-banner-desc">Visitá el Catálogo de Recompensas para ver todos los premios disponibles, sus costos y copiar el comando de canje.</span>
+			</div>
+			<a href="./tienda.html" class="guide-banner-btn">🛒 Ir al Catálogo de Recompensas ➔</a>
+		</aside>
+
+		<!-- Footer -->
+		<footer class="catalog-footer">
+			<p>Nico Yak Twitch Productivity Suite • <a href="./tienda.html">Ir al Catálogo de Recompensas</a> • ¡Sumate a estudiar en vivo en <a href="https://twitch.tv/nicoyak" target="_blank" rel="noopener noreferrer">twitch.tv/nicoyak</a>!</p>
+		</footer>
+	</div>
+
+	<!-- Toast Notification Container -->
+	<div id="toast" class="toast" role="alert" aria-live="assertive">
+		<span class="toast-icon">✔</span>
+		<span id="toast-text" class="toast-text">Comando copiado al portapapeles</span>
+	</div>
+
+	<!-- Logic Script -->
+	<script src="./scripts/comandos.js" defer></script>
+</body>
+</html>
